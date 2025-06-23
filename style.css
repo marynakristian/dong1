@@ -1,0 +1,235 @@
+body {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 4vh;
+    font-family: italic;
+    font-family: "Alex Brush", cursive;
+
+    /* удаляем background-color — видео заменяет фон */
+    overflow-x: hidden;
+}
+
+.video {
+    position: fixed; /* <--- фиксируем видео */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* видео позади контента */
+    overflow: hidden;
+}
+
+.video_media {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(249, 233, 206, 0.6); /* прозрачный бежевый */
+    z-index: 1.5;
+}
+
+.intro {
+    display: flex;
+    justify-content: center; /* по горизонтали */
+    align-items: center; /* по вертикали */
+    min-height: 100vh;
+    padding: 5vh 2vw;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+.intro-content {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: auto;
+    margin: auto;
+}
+
+.intro:after {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: rgb(249, 233, 206 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.intro-content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-family: "WindSong", cursive;
+
+    color: black;
+    text-align: center;
+    font-size: 10vh;
+    font-weight: 10;
+}
+
+.citata {
+    padding-top: 10vh;
+    text-align: center;
+    font-size: 5vh;
+}
+
+.author {
+    text-align: centerw;
+}
+
+.parintii {
+    text-align: center;
+    font-size: 4vh;
+}
+
+::marker {
+    color: rgb(255, 213, 197);
+    marker: none;
+    text-decoration: none;
+}
+
+.parintii-cont {
+    display: grid;
+    justify-content: space-evenly;
+    text-align: center;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+}
+
+.invitatie {
+    margin-right: 5vh;
+    margin-left: 5vh;
+    text-align: center;
+    font-size: 5vh;
+}
+
+.grid-container {
+    font-size: 5vh;
+    justify-content: space-evenly;
+    display: grid;
+    padding: 0.3em;
+    border-radius: 3px;
+    font-weight: bold;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+}
+
+.biserica {
+    text-align: center;
+    font-size: 3vh;
+    padding-top: 20vh;
+}
+
+.restaurant {
+    text-align: center;
+    font-size: 3vh;
+    padding-top: 20vh;
+}
+
+.culorile-nuntii {
+    text-align: center;
+    font-size: 3vh;
+    padding-top: 20vh;
+}
+
+.culori {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-items: center;
+}
+
+.grid-container-culori {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0; /* убираем стандартный gap */
+    padding: 2vh 0;
+    overflow-x: auto; /* на случай, если ширина не помещается */
+}
+
+.grid-container-culori > div {
+    flex: 0 0 auto; /* фиксируем, чтобы не сжимались */
+    width: clamp(10vh, 12vw, 15vh);
+    height: clamp(10vh, 12vw, 15vh);
+    border-radius: 50%;
+    margin-left: -5vh; /* сдвигаем каждый следующий кружок наложением */
+    box-sizing: content-box; /* чтобы margin не влиял на размер */
+}
+
+.culore-1 {
+    background-color: rgb(75, 132, 94);
+}
+.culore-2 {
+    background-color: rgb(117, 144, 96);
+}
+.culore-3 {
+    background-color: rgb(105, 133, 119);
+}
+.culore-4 {
+    background-color: rgb(205, 197, 123);
+}
+.culore-5 {
+    background-color: rgb(234, 167, 167);
+}
+.culore-6 {
+    background-color: rgb(173, 134, 160);
+}
+.culore-7 {
+    background-color: rgb(163, 124, 166);
+}
+
+.gatatu {
+    text-align: center;
+    padding-top: 20vh;
+    font-size: 5vh;
+}
+
+footer {
+    font-size: 2vh;
+    text-align: center;
+}
+
+@media (max-width: 390px) {
+    .grid-container-culori {
+        justify-content: center;
+        padding-left: 4vh;
+    }
+
+    .grid-container-culori > div {
+        width: 10vh;
+        height: 10vh;
+    }
+}
